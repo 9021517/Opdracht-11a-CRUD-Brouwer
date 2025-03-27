@@ -104,13 +104,13 @@ function printCrudTabel($result){
         
         // Wijzig knopje
         $table .= "<td>
-            <form method='post' action='update.php?id=<?php echo $row['id']; ?>'>
+            <form method='post' action='update.php?id=<?php echo $row[id]; ?>'>
                 <button>Wzg</button>	 
             </form></td>";
 
         // Delete knopje
         $table .= "<td>
-            <form method='post' action='delete.php? id=$row [id']; ?>'> 
+            <form method='post' action='delete.php? id=$row [id]'>       
                 <button>Verwijder</button>	 
             </form></td>";
 
@@ -198,6 +198,5 @@ function deleteRecord($id){
     $retVal = ($stmt->rowCount() == 1) ? true : false ;
     return $retVal;
 }
-
 
 ?>
